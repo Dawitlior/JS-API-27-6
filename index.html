@@ -5,19 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1>Welcome to weatherApp</h1>
-    <label for="">Select Name city</label><br>
-    <select id="cityNameSelect" oninput="printWeather()"  type="text" placeholder="Type city">
+    <button id="btn" onclick="printWeather()">Click</button>
+    <select id="cityNameSelect" type="text" placeholder="Type city">
       <option value="lod">lod</option>
       <option value="rehovot">rehovot</option>
       <option value="kiryat-malachi">kiryat-malachi</option>
       <option value="jerusalem">jerusalem</option>
       <option value="paris">paris</option>
-    </section>
-    <!-- <button id="btn" onclick="printWeather()">Click</button> -->
+    </select>
     <div id="my_div"></div>
     
     <script src="main.js"></script>
