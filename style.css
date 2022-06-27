@@ -1,0 +1,12 @@
+body{
+    background-color: rgba(127, 255, 212, 0.495);
+
+}
+#btn{
+    display: flex;
+    flex-direction: column;
+}
+#my_div{
+    display: flex;
+    flex-direction: column;
+}
