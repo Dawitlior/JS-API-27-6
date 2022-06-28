@@ -5,7 +5,7 @@ const theDiv = document.getElementById("my_div");
 async function getTheWeather() {
   try {
     return await fetch(
-      `${WEATHER_BASIC_API}weather?q=${cityName}&appid=${API_KEY}`
+      `${WEATHER_BASIC_API}weather?q=${cityName.value}&appid=${API_KEY}`
     ).then((res) => res.json());
   } catch (err) {
     alert(err);
@@ -13,13 +13,13 @@ async function getTheWeather() {
   }
 }
 
-let cityName = cityNameSelect.value;
 function printWeather() {
   getTheWeather(cityName).then((result) => {
     for (let item in result) {
-      for(let key in result[item]){
-        // theDiv.innerHTML += `<p>${}`
-        theDiv.innerHTML += `<p>${key}: ${result[item]}</p>`;
+      for (let key in result[item]) {
+        for (let res in item[key]) {
+          theDiv.innerHTML += `<p>${item}:${key}</p>`;
+        }
       }
     }
   });
