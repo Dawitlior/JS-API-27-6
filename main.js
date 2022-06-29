@@ -3,6 +3,7 @@ const WEATHER_BASIC_API = "https://api.openweathermap.org/data/2.5/";
 const theDiv = document.getElementById("my_div");
 
 async function getTheWeather() {
+
   try {
     return await fetch(
       `${WEATHER_BASIC_API}weather?q=${cityName.value}&appid=${API_KEY}`
@@ -11,6 +12,7 @@ async function getTheWeather() {
     alert(err);
   } finally {
   }
+  
 }
 
 function printWeather() {
